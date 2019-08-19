@@ -1,0 +1,3 @@
+defines
+GST_MESSAGE_ERROR
+^2r10

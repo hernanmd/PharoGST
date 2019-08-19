@@ -1,0 +1,13 @@
+{
+	"classtraitcomposition" : "TGStreamerLibrary classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GSTVideoOverlayInterface",
+	"commentStamp" : "",
+	"super" : "Object",
+	"traitcomposition" : "TGStreamerLibrary",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "GStreamer"
+}

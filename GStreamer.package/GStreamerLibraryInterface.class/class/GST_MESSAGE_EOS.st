@@ -1,0 +1,3 @@
+defines
+GST_MESSAGE_EOS
+^2r1

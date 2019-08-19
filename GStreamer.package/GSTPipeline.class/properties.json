@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GSTBin",
+	"category" : "GStreamer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GSTPipeline",
+	"type" : "normal"
+}

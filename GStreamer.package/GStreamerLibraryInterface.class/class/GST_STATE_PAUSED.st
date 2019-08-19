@@ -1,0 +1,3 @@
+defines
+GST_STATE_PAUSED
+^3

@@ -1,0 +1,3 @@
+defines
+GST_MESSAGE_ERROR_or_EOS
+^self GST_MESSAGE_EOS bitOr: self GST_MESSAGE_ERROR.

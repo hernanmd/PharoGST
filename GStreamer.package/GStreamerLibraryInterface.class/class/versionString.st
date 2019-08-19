@@ -1,0 +1,4 @@
+versions
+versionString
+"GStreamerLibraryInterface versionString"
+^self gst_version_string

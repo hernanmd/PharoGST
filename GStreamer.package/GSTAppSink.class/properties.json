@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GSTBaseSink",
+	"category" : "GStreamer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GSTAppSink",
+	"type" : "normal"
+}

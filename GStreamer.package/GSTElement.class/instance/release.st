@@ -1,0 +1,3 @@
+dependencies
+release
+GStreamerLibraryInterface gst_object_unref: handle

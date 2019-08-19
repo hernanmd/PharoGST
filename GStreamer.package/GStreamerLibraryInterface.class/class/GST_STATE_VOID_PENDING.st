@@ -1,0 +1,3 @@
+defines
+GST_STATE_VOID_PENDING
+^0

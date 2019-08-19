@@ -1,0 +1,3 @@
+defines
+GST_STATE_PLAYING
+^4

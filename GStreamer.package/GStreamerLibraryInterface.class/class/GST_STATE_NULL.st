@@ -1,0 +1,3 @@
+defines
+GST_STATE_NULL
+^1

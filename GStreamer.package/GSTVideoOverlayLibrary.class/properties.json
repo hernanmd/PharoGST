@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FFILibrary",
+	"category" : "GStreamer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GSTVideoOverlayLibrary",
+	"type" : "normal"
+}

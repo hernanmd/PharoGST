@@ -1,0 +1,3 @@
+services
+resizeVideoBox: aVideoBoxElement toBounds: aRectangle
+	^aVideoBoxElement overlaySetRenderRectangle: aRectangle

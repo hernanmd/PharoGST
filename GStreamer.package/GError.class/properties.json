@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "FFIExternalStructure",
+	"category" : "GStreamer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"OFFSET_CODE",
+		"OFFSET_DOMAIN",
+		"OFFSET_MESSAGE"
+	],
+	"instvars" : [ ],
+	"name" : "GError",
+	"type" : "normal"
+}
