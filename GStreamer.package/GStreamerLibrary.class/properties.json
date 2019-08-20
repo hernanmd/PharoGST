@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "FFILibrary",
-	"category" : "GStreamer",
+	"category" : "GStreamer-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

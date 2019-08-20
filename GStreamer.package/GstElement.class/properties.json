@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "GstObject",
+	"category" : "GStreamer-Objects",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"duration"
+	],
+	"name" : "GstElement",
+	"type" : "normal"
+}

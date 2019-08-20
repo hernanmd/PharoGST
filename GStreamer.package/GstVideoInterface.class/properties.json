@@ -2,7 +2,7 @@
 	"classtraitcomposition" : "TGStreamerLibrary classTrait",
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "GStreamerLibraryInterface",
+	"name" : "GstVideoInterface",
 	"commentStamp" : "",
 	"super" : "Object",
 	"traitcomposition" : "TGStreamerLibrary",

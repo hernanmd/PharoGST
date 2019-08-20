@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "GLibLibrary",
+	"name" : "GstVideoLibrary",
 	"type" : "normal"
 }

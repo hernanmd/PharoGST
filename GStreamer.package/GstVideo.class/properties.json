@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "GStreamer-Objects",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"initState"
+	],
+	"instvars" : [
+		"pipeline",
+		"videoBox",
+		"ipAddress",
+		"port"
+	],
+	"name" : "GstVideo",
+	"type" : "normal"
+}

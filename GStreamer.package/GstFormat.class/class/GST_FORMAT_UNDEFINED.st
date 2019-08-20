@@ -1,0 +1,3 @@
+enumeration
+GST_FORMAT_UNDEFINED
+	^ 0

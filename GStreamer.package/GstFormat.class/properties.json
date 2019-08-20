@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "FFILibrary",
-	"category" : "GStreamer-Core",
+	"super" : "Object",
+	"category" : "GStreamer-Enumerations",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "GLibLibrary",
+	"name" : "GstFormat",
 	"type" : "normal"
 }

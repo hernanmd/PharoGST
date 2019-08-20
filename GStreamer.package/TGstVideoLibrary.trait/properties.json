@@ -3,5 +3,5 @@
 	"classinstvars" : [ ],
 	"category" : "GStreamer-Core",
 	"instvars" : [ ],
-	"name" : "TGlibLibrary"
+	"name" : "TGstVideoLibrary"
 }
