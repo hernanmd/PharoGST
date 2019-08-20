@@ -7,4 +7,4 @@ unixModuleName
 			libraryPath := path asFileReference / 'libgstreamer-1.0.so.0'.
 			libraryPath exists
 				ifTrue: [ ^ libraryPath fullName ] ].
-	self error: 'Cannot locate cairo library. Please check if it installed on your system'
+	self error: 'Cannot locate gstreamer library. Please check if it installed on your system'

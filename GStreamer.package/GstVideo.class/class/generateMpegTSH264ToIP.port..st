@@ -1,9 +1,9 @@
 instance creation
 generateMpegTSH264ToIP: ipAddress port: aNumber
-| tmp |
-	tmp := self new.
-	tmp ipAddress: ipAddress.
-	tmp port: aNumber.
-	tmp video: (Gst generateMpegTSH264ToIP: ipAddress port: aNumber).
-	tmp videoBox: nil.
-^tmp
+	| video |
+	video := self new.
+	video ipAddress: ipAddress.
+	video port: aNumber.
+	video pipeline: (Gst generateMpegTSH264ToIP: ipAddress port: aNumber).
+	video videoBox: nil.
+	^ video

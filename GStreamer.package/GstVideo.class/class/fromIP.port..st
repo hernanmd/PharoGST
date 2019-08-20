@@ -1,9 +1,9 @@
 instance creation
 fromIP: ipAddress port: aNumber
-| tmp |
-	tmp := self new.
-tmp ipAddress: ipAddress.
-tmp port: aNumber.
-tmp video: (Gst getNetworkVideoIp: ipAddress port: aNumber).
-tmp videoBox: (Gst getVideoBoxElement: tmp video).
-^tmp
+	| video |
+	video := self new.
+	video ipAddress: ipAddress.
+	video port: aNumber.
+	video	pipeline: (Gst getNetworkVideoIp: ipAddress port: aNumber).
+	video 	videoBox: (Gst getVideoBoxElement: video pipeline).
+	^ video
