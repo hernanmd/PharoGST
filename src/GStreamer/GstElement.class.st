@@ -4,6 +4,16 @@ Class {
 	#category : #'GStreamer-Core'
 }
 
+{ #category : #converting }
+GstElement >> asGstBaseSink [
+	  ^ GstBaseSink fromHandle: self handle
+]
+
+{ #category : #converting }
+GstElement >> asGstBin [
+	^ GstBin fromHandle: self handle
+]
+
 { #category : #API }
 GstElement >> getCurrentRunningTime [
 	^ self gst_element_get_current_running_time

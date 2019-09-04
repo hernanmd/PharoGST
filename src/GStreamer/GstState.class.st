@@ -60,8 +60,3 @@ GstState class >> enumDecl [
 		GST_STATE_PLAYING 4
 	)
 ]
-
-{ #category : #'class initialization' }
-GstState class >> initialize [
-	self initializeEnumeration
-]

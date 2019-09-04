@@ -1,8 +1,16 @@
 Class {
 	#name : #GstVideoOverlay,
 	#superclass : #FFIOpaqueObject,
+	#traits : 'TGstVideoOverlayLibrary',
+	#classTraits : 'TGstVideoOverlayLibrary classTrait',
 	#category : #'GStreamer-Video'
 }
+
+{ #category : #'library path' }
+GstVideoOverlay class >> ffiLibraryName [
+	self flag: 'TODO: binding for Windows and Mac library'.
+	^ 'libgstvideo-1.0.so.0'
+]
 
 { #category : #'private - primitives' }
 GstVideoOverlay >> gst_video_overlay_handle_events: handle_events [

@@ -4,6 +4,11 @@ Class {
 	#category : #'GStreamer-Base and Utility'
 }
 
+{ #category : #converting }
+GstBaseSink >> asGstVideoOverlay [
+	 ^ GstVideoOverlay fromHandle: self handle
+]
+
 { #category : #API }
 GstBaseSink >> getLastSample [
 	^ self gst_base_sink_get_last_sample 

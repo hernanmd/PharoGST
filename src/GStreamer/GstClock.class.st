@@ -12,5 +12,5 @@ GstClock class >> GST_SECOND [
 
 { #category : #macros }
 GstClock class >> GST_TIME_AS_SECONDS: time [ 
-	^ time / self GST_SECOND
+	^ (time / self GST_SECOND value) asInteger
 ]

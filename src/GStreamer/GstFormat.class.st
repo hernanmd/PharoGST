@@ -52,14 +52,13 @@ GstFormat class >> GST_FORMAT_UNDEFINED [
 GstFormat class >> enumDecl [
 	"
 	self rebuildEnumAccessors
-	"
-
-	^ #(
-			GST_FORMAT_UNDEFINED 0
-			GST_FORMAT_DEFAULT 1
-			GST_FORMAT_BYTES 2
-			GST_FORMAT_TIME 3
-			GST_FORMAT_BUFFERS 4
-			GST_FORMAT_PERCENT 5
-	)
+	" 
+	^ {
+		(#GST_FORMAT_UNDEFINED -> 0).
+		(#GST_FORMAT_DEFAULT -> 1).
+		(#GST_FORMAT_BYTES -> 2).
+		(#GST_FORMAT_TIME -> 3).
+		(#GST_FORMAT_BUFFERS -> 4).
+		(#GST_FORMAT_PERCENT -> 5).
+	} asDictionary 
 ]
