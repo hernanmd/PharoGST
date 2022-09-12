@@ -30,6 +30,12 @@ GstElement >> getStaticPad: aName [
 ]
 
 { #category : #'private - ffi' }
+GstElement >> gst_element_get_bus: element [
+
+	^ self ffiCall: #(GstBus * gst_element_get_bus (GstElement * element))
+]
+
+{ #category : #'private - ffi' }
 GstElement >> gst_element_get_current_running_time [
 	^ self ffiCall: #( int gst_element_get_current_running_time ( self ))
 ]

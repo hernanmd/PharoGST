@@ -1,6 +1,6 @@
 Class {
 	#name : #GStreamer,
-	#superclass : #Object,
+	#superclass : #FFILibrary,
 	#classVars : [
 		'ModuleName',
 		'ModuleSession'
@@ -18,24 +18,14 @@ GStreamer class >> checkLibraryName: aName [
 
 { #category : #native }
 GStreamer class >> ffiLibraryName [
-	^ self moduleName
-]
 
-{ #category : #native }
-GStreamer class >> findGStreamer [
-	"In Linux, try to use the linked version."
-	OSSDL2Driver hasPlugin.
-	
-	"Look for SDL2 using different names."
-	#(0							"Static"
-	GStreamer
-	'libgstreamer-1.0.dylib'		"Mac"
-	'libgstreamer-1.0.so.0'		"Linux"
-	'libgstreamer-1.0.dll'		"Windows"
-	) do: [ :eachName | 
-		[ (self checkLibraryName: eachName) ifTrue: [ ^ eachName ] ] 
-		ifError: [nil] ].
-	self error: 'Failed to find GStreamer library.'
+	^ Smalltalk os isMacOSX
+		ifTrue: [ self macLibraryFileName ]
+		ifFalse: [ Smalltalk os isLinux
+			ifTrue: [ self unixLibraryFileName ]
+			ifFalse: [ Smalltalk os isWindows 
+					ifTrue: [ self win32LibraryFileName
+					ifFalse: [ self error: 'Library not found' ] ] ] ]
 ]
 
 { #category : #'private - primitives' }
@@ -59,9 +49,13 @@ GStreamer class >> init [
 
 { #category : #testing }
 GStreamer class >> isAvailable [
-	^ [ (ExternalAddress 
+
+	[ (ExternalAddress 
 		loadSymbol: 'gst_init'
-		from: GStreamer moduleName) notNil ] ifError: [ false ]
+		from: self ffiLibraryName) notNil ] 
+	on: Error
+	do: [ : ex | ^ false ].
+	^ true
 ]
 
 { #category : #testing }
@@ -70,12 +64,18 @@ GStreamer class >> isInit [
 ]
 
 { #category : #native }
-GStreamer class >> moduleName [
-	ModuleSession ~~ Smalltalk session ifTrue: [
-		ModuleName := self findGStreamer.
-		ModuleSession := Smalltalk session
-	].
-	^ ModuleName
+GStreamer class >> macLibraryFileName [
+
+	^ 'libgstreamer-1.0.dylib'
+]
+
+{ #category : #native }
+GStreamer class >> macLibraryName [
+	"Private - See superclass comment"
+
+	^ FFIMacLibraryFinder new 
+		userPaths: { FileLocator workingDirectory };
+		findAnyLibrary: { self macLibraryFileName }
 ]
 
 { #category : #private }
@@ -83,6 +83,36 @@ GStreamer class >> osSpecificVideoSink [
 	Smalltalk os platformName = 'unix' ifTrue:[ ^ 'xvimagesink' ].
 	Smalltalk os platformName = 'Win32' ifTrue:[ ^ 'd3dvideosink' ].
 	^ self error: 'OS not supported'.
+]
+
+{ #category : #native }
+GStreamer class >> unixLibraryFileName [
+
+	^ 'libgstreamer-1.0.so.0'
+]
+
+{ #category : #native }
+GStreamer class >> unixLibraryName [
+	"Private - See superclass comment"
+
+	^ FFIUnixLibraryFinder new 
+		userPaths: { FileLocator workingDirectory };
+		findAnyLibrary: { self unixLibraryFileName }
+]
+
+{ #category : #native }
+GStreamer class >> win32LibraryFileName [
+
+	^ 'libgstreamer-1.0.dll'
+]
+
+{ #category : #native }
+GStreamer class >> win32LibraryName [
+	"Private - See superclass comment"
+
+	^ FFIWindowsLibraryFinder new 
+		userPaths: { FileLocator workingDirectory };
+		findAnyLibrary: { self win32LibraryFileName }
 ]
 
 { #category : #'library path' }
