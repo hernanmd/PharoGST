@@ -10,3 +10,9 @@ Metacello new
    repository: 'github://OpenSmock/PharoGStreamer';
    load.
 ```
+
+## Links
+
+[GStreamer : open source multimedia framework](https://gstreamer.freedesktop.org/)
+
+[GStreamer github](https://github.com/GStreamer/gstreamer)
