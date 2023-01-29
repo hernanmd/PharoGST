@@ -31,7 +31,7 @@ GStreamer class >> findGStreamer [
 	GStreamer
 	'libgstreamer-1.0.dylib'		"Mac"
 	'libgstreamer-1.0.so.0'		"Linux"
-	'libgstreamer-1.0.dll'		"Windows"
+	'libgstreamer-1.0-0.dll'		"Windows"
 	) do: [ :eachName | 
 		[ (self checkLibraryName: eachName) ifTrue: [ ^ eachName ] ] 
 		onErrorDo: [nil] ].
