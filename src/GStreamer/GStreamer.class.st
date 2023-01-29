@@ -34,7 +34,7 @@ GStreamer class >> findGStreamer [
 	'libgstreamer-1.0.dll'		"Windows"
 	) do: [ :eachName | 
 		[ (self checkLibraryName: eachName) ifTrue: [ ^ eachName ] ] 
-		ifError: [nil] ].
+		onErrorDo: [nil] ].
 	self error: 'Failed to find GStreamer library.'
 ]
 
@@ -61,7 +61,7 @@ GStreamer class >> init [
 GStreamer class >> isAvailable [
 	^ [ (ExternalAddress 
 		loadSymbol: 'gst_init'
-		from: GStreamer moduleName) notNil ] ifError: [ false ]
+		from: GStreamer moduleName) notNil ] onErrorDo: [ false ]
 ]
 
 { #category : #testing }
