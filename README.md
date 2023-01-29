@@ -7,7 +7,7 @@ A GStreamer binding for Pharo
 ```smalltalk
 Metacello new
    baseline: 'GStreamer';
-   repository: 'github://OpenSmock/PharoGStreamer';
+   repository: 'github://OpenSmock/PharoGStreamer:main';
    load.
 ```
 
