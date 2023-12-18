@@ -1,6 +1,6 @@
 Class {
-	#name : #GLibTypes,
-	#superclass : #SharedPool,
+	#name : 'GLibTypes',
+	#superclass : 'SharedPool',
 	#classVars : [
 		'gboolean',
 		'gchar',
@@ -9,10 +9,12 @@ Class {
 		'guint64',
 		'guintptr'
 	],
-	#category : #'GStreamer-FFI-Base'
+	#category : 'GStreamer-FFI-Base',
+	#package : 'GStreamer',
+	#tag : 'FFI-Base'
 }
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 GLibTypes class >> initialize [
 	"
 	self initialize

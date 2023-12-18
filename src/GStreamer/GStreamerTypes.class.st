@@ -1,16 +1,18 @@
 Class {
-	#name : #GStreamerTypes,
-	#superclass : #SharedPool,
+	#name : 'GStreamerTypes',
+	#superclass : 'SharedPool',
 	#classVars : [
 		'GstClockTimeDiff'
 	],
 	#pools : [
 		'GLibTypes'
 	],
-	#category : #'GStreamer-FFI-Base'
+	#category : 'GStreamer-FFI-Base',
+	#package : 'GStreamer',
+	#tag : 'FFI-Base'
 }
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 GStreamerTypes class >> initialize [
 	"
 	self initialize

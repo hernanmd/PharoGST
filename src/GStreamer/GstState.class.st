@@ -1,6 +1,6 @@
 Class {
-	#name : #GstState,
-	#superclass : #FFIExternalEnumeration,
+	#name : 'GstState',
+	#superclass : 'FFIExternalEnumeration',
 	#classVars : [
 		'GET_STATE_NULL',
 		'GET_STATE_PAUSED',
@@ -13,40 +13,42 @@ Class {
 		'GST_STATE_READY',
 		'GST_STATE_VOID_PENDING'
 	],
-	#category : #'GStreamer-Core'
+	#category : 'GStreamer-Core',
+	#package : 'GStreamer',
+	#tag : 'Core'
 }
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstState class >> GST_STATE_NULL [
 	"This method was automatically generated"
 	^ GST_STATE_NULL
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstState class >> GST_STATE_PAUSED [
 	"This method was automatically generated"
 	^ GST_STATE_PAUSED
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstState class >> GST_STATE_PLAYING [
 	"This method was automatically generated"
 	^ GST_STATE_PLAYING
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstState class >> GST_STATE_READY [
 	"This method was automatically generated"
 	^ GST_STATE_READY
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstState class >> GST_STATE_VOID_PENDING [
 	"This method was automatically generated"
 	^ GST_STATE_VOID_PENDING
 ]
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 GstState class >> enumDecl [
 	"
 	self rebuildEnumAccessors

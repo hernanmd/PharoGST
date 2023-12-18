@@ -1,1 +1,1 @@
-Package { #name : #GStreamer }
+Package { #name : 'GStreamer' }

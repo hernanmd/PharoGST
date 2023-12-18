@@ -1,6 +1,6 @@
 Class {
-	#name : #GstFormat,
-	#superclass : #FFIExternalEnumeration,
+	#name : 'GstFormat',
+	#superclass : 'FFIExternalEnumeration',
 	#classVars : [
 		'GST_FORMAT_BUFFERS',
 		'GST_FORMAT_BYTES',
@@ -9,46 +9,48 @@ Class {
 		'GST_FORMAT_TIME',
 		'GST_FORMAT_UNDEFINED'
 	],
-	#category : #'GStreamer-Core'
+	#category : 'GStreamer-Core',
+	#package : 'GStreamer',
+	#tag : 'Core'
 }
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstFormat class >> GST_FORMAT_BUFFERS [
 	"This method was automatically generated"
 	^ GST_FORMAT_BUFFERS
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstFormat class >> GST_FORMAT_BYTES [
 	"This method was automatically generated"
 	^ GST_FORMAT_BYTES
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstFormat class >> GST_FORMAT_DEFAULT [
 	"This method was automatically generated"
 	^ GST_FORMAT_DEFAULT
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstFormat class >> GST_FORMAT_PERCENT [
 	"This method was automatically generated"
 	^ GST_FORMAT_PERCENT
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstFormat class >> GST_FORMAT_TIME [
 	"This method was automatically generated"
 	^ GST_FORMAT_TIME
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstFormat class >> GST_FORMAT_UNDEFINED [
 	"This method was automatically generated"
 	^ GST_FORMAT_UNDEFINED
 ]
 
-{ #category : #'enum declaration' }
+{ #category : 'enum declaration' }
 GstFormat class >> enumDecl [
 	"
 	self rebuildEnumAccessors

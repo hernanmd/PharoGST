@@ -1,13 +1,15 @@
 Class {
-	#name : #GLibConstants,
-	#superclass : #SharedPool,
+	#name : 'GLibConstants',
+	#superclass : 'SharedPool',
 	#classVars : [
 		'G_USEC_PER_SEC'
 	],
-	#category : #'GStreamer-FFI-Base'
+	#category : 'GStreamer-FFI-Base',
+	#package : 'GStreamer',
+	#tag : 'FFI-Base'
 }
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 GLibConstants class >> initialize [
 	"
 	self initialize

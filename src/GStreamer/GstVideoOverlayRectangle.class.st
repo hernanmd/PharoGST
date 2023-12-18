@@ -1,5 +1,7 @@
 Class {
-	#name : #GstVideoOverlayRectangle,
-	#superclass : #FFIExternalObject,
-	#category : #'GStreamer-Video'
+	#name : 'GstVideoOverlayRectangle',
+	#superclass : 'FFIExternalObject',
+	#category : 'GStreamer-Video',
+	#package : 'GStreamer',
+	#tag : 'Video'
 }

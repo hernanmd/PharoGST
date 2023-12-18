@@ -1,6 +1,6 @@
 Class {
-	#name : #GstMessageType,
-	#superclass : #FFIExternalEnumeration,
+	#name : 'GstMessageType',
+	#superclass : 'FFIExternalEnumeration',
 	#classVars : [
 		'GST_MESSAGE_EOS',
 		'GST_MESSAGE_ERROR',
@@ -9,46 +9,48 @@ Class {
 		'GST_MESSAGE_UNKNOWN',
 		'GST_MESSAGE_WARNING'
 	],
-	#category : #'GStreamer-Core'
+	#category : 'GStreamer-Core',
+	#package : 'GStreamer',
+	#tag : 'Core'
 }
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstMessageType class >> GST_MESSAGE_EOS [
 	"This method was automatically generated"
 	^ GST_MESSAGE_EOS
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstMessageType class >> GST_MESSAGE_ERROR [
 	"This method was automatically generated"
 	^ GST_MESSAGE_ERROR
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstMessageType class >> GST_MESSAGE_INFO [
 	"This method was automatically generated"
 	^ GST_MESSAGE_INFO
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstMessageType class >> GST_MESSAGE_TAG [
 	"This method was automatically generated"
 	^ GST_MESSAGE_TAG
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstMessageType class >> GST_MESSAGE_UNKNOWN [
 	"This method was automatically generated"
 	^ GST_MESSAGE_UNKNOWN
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstMessageType class >> GST_MESSAGE_WARNING [
 	"This method was automatically generated"
 	^ GST_MESSAGE_WARNING
 ]
 
-{ #category : #'enum declaration' }
+{ #category : 'enum declaration' }
 GstMessageType class >> enumDecl [
 	"
 	self rebuildEnumAccessors

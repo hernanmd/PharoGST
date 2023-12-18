@@ -1,6 +1,6 @@
 Class {
-	#name : #GStreamer,
-	#superclass : #FFILibrary,
+	#name : 'GStreamer',
+	#superclass : 'Object',
 	#classVars : [
 		'ModuleName',
 		'ModuleSession'
@@ -8,15 +8,17 @@ Class {
 	#pools : [
 		'GStreamerTypes'
 	],
-	#category : #'GStreamer-FFI-Base'
+	#category : 'GStreamer-FFI-Base',
+	#package : 'GStreamer',
+	#tag : 'FFI-Base'
 }
 
-{ #category : #native }
+{ #category : 'native' }
 GStreamer class >> checkLibraryName: aName [
 	^ (ExternalAddress loadSymbol: 'gst_init' from: aName) notNil
 ]
 
-{ #category : #native }
+{ #category : 'native' }
 GStreamer class >> ffiLibraryName [
 
 	^ Smalltalk os isMacOSX
@@ -28,26 +30,26 @@ GStreamer class >> ffiLibraryName [
 					ifFalse: [ self error: 'Library not found' ] ] ] ]
 ]
 
-{ #category : #'private - primitives' }
+{ #category : 'private - primitives' }
 GStreamer class >> gst_init: argc string: argv [
 	^ self ffiCall: #( void gst_init (int *argc, char **argv))
 
 ]
 
-{ #category : #'private - primitives' }
+{ #category : 'private - primitives' }
 GStreamer class >> gst_is_initialized [
 	^ self ffiCall: #( gboolean gst_is_initialized ( void ))
 
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GStreamer class >> init [
 	self 
 		gst_init: 0 pointer 
 		string: (ExternalAddress fromString: '').
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 GStreamer class >> isAvailable [
 
 	[ (ExternalAddress 
@@ -58,18 +60,18 @@ GStreamer class >> isAvailable [
 	^ true
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 GStreamer class >> isInit [
 	^ self gst_is_initialized
 ]
 
-{ #category : #native }
+{ #category : 'native' }
 GStreamer class >> macLibraryFileName [
 
 	^ 'libgstreamer-1.0.dylib'
 ]
 
-{ #category : #native }
+{ #category : 'native' }
 GStreamer class >> macLibraryName [
 	"Private - See superclass comment"
 
@@ -78,20 +80,20 @@ GStreamer class >> macLibraryName [
 		findAnyLibrary: { self macLibraryFileName }
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 GStreamer class >> osSpecificVideoSink [
 	Smalltalk os platformName = 'unix' ifTrue:[ ^ 'xvimagesink' ].
 	Smalltalk os platformName = 'Win32' ifTrue:[ ^ 'd3dvideosink' ].
 	^ self error: 'OS not supported'.
 ]
 
-{ #category : #native }
+{ #category : 'native' }
 GStreamer class >> unixLibraryFileName [
 
 	^ 'libgstreamer-1.0.so.0'
 ]
 
-{ #category : #native }
+{ #category : 'native' }
 GStreamer class >> unixLibraryName [
 	"Private - See superclass comment"
 
@@ -100,13 +102,13 @@ GStreamer class >> unixLibraryName [
 		findAnyLibrary: { self unixLibraryFileName }
 ]
 
-{ #category : #native }
+{ #category : 'native' }
 GStreamer class >> win32LibraryFileName [
 
 	^ 'libgstreamer-1.0.dll'
 ]
 
-{ #category : #native }
+{ #category : 'native' }
 GStreamer class >> win32LibraryName [
 	"Private - See superclass comment"
 
@@ -115,7 +117,7 @@ GStreamer class >> win32LibraryName [
 		findAnyLibrary: { self win32LibraryFileName }
 ]
 
-{ #category : #'library path' }
+{ #category : 'library path' }
 GStreamer >> ffiLibraryName [
 	^self class ffiLibraryName
 ]

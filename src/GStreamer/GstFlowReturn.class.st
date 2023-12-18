@@ -1,6 +1,6 @@
 Class {
-	#name : #GstFlowReturn,
-	#superclass : #FFIExternalEnumeration,
+	#name : 'GstFlowReturn',
+	#superclass : 'FFIExternalEnumeration',
 	#classVars : [
 		'GST_FLOW_CUSTOM_ERROR',
 		'GST_FLOW_CUSTOM_ERROR_1',
@@ -16,88 +16,90 @@ Class {
 		'GST_FLOW_NOT_SUPPORTED',
 		'GST_FLOW_OK'
 	],
-	#category : #'GStreamer-Core'
+	#category : 'GStreamer-Core',
+	#package : 'GStreamer',
+	#tag : 'Core'
 }
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstFlowReturn class >> GST_FLOW_CUSTOM_ERROR [
 	"This method was automatically generated"
 	^ GST_FLOW_CUSTOM_ERROR
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstFlowReturn class >> GST_FLOW_CUSTOM_ERROR_1 [
 	"This method was automatically generated"
 	^ GST_FLOW_CUSTOM_ERROR_1
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstFlowReturn class >> GST_FLOW_CUSTOM_ERROR_2 [
 	"This method was automatically generated"
 	^ GST_FLOW_CUSTOM_ERROR_2
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstFlowReturn class >> GST_FLOW_CUSTOM_SUCCESS [
 	"This method was automatically generated"
 	^ GST_FLOW_CUSTOM_SUCCESS
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstFlowReturn class >> GST_FLOW_CUSTOM_SUCCESS_1 [
 	"This method was automatically generated"
 	^ GST_FLOW_CUSTOM_SUCCESS_1
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstFlowReturn class >> GST_FLOW_CUSTOM_SUCCESS_2 [
 	"This method was automatically generated"
 	^ GST_FLOW_CUSTOM_SUCCESS_2
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstFlowReturn class >> GST_FLOW_EOS [
 	"This method was automatically generated"
 	^ GST_FLOW_EOS
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstFlowReturn class >> GST_FLOW_ERROR [
 	"This method was automatically generated"
 	^ GST_FLOW_ERROR
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstFlowReturn class >> GST_FLOW_FLUSHING [
 	"This method was automatically generated"
 	^ GST_FLOW_FLUSHING
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstFlowReturn class >> GST_FLOW_NOT_LINKED [
 	"This method was automatically generated"
 	^ GST_FLOW_NOT_LINKED
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstFlowReturn class >> GST_FLOW_NOT_NEGOTIATED [
 	"This method was automatically generated"
 	^ GST_FLOW_NOT_NEGOTIATED
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstFlowReturn class >> GST_FLOW_NOT_SUPPORTED [
 	"This method was automatically generated"
 	^ GST_FLOW_NOT_SUPPORTED
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 GstFlowReturn class >> GST_FLOW_OK [
 	"This method was automatically generated"
 	^ GST_FLOW_OK
 ]
 
-{ #category : #'enum declaration' }
+{ #category : 'enum declaration' }
 GstFlowReturn class >> enumDecl [
 	"
 	self rebuildEnumAccessors

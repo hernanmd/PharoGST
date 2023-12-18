@@ -1,25 +1,27 @@
 Class {
-	#name : #GstBus,
-	#superclass : #GstObject,
-	#category : #'GStreamer-Core'
+	#name : 'GstBus',
+	#superclass : 'GstObject',
+	#category : 'GStreamer-Core',
+	#package : 'GStreamer',
+	#tag : 'Core'
 }
 
-{ #category : #api }
+{ #category : 'api' }
 GstBus >> gst_bus_peek [
 	^ self ffiCall: #( GstMessage * gst_bus_peek (GstBus * bus))
 ]
 
-{ #category : #api }
+{ #category : 'api' }
 GstBus >> gst_bus_poll: bus events: events clock: timeout [
 	^ self ffiCall: #( GstMessage * gst_bus_poll (GstBus * bus, GstMessageType events, GstClockTime timeout))
 ]
 
-{ #category : #api }
+{ #category : 'api' }
 GstBus >> gst_bus_pop [
 	^ self ffiCall: #(GstMessage * gst_bus_pop (self))
 ]
 
-{ #category : #api }
+{ #category : 'api' }
 GstBus >> gst_bus_timed_pop_filtered: timeout types: types [
 
 	^ self ffiCall: #(GstMessage * gst_bus_timed_pop_filtered (self, GstClockTime timeout, GstMessageType types))
