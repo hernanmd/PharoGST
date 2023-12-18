@@ -30,6 +30,14 @@ GStreamer class >> ffiLibraryName [
 					ifFalse: [ self error: 'Library not found' ] ] ] ]
 ]
 
+{ #category : 'native' }
+GStreamer class >> findGStreamer [
+
+	"In Linux, try to use the linked version."
+	OSSDL2Driver hasPlugin.	
+	^ Smalltalk platform ffiLibraryName: self.
+]
+
 { #category : 'private - primitives' }
 GStreamer class >> gst_init: argc string: argv [
 	^ self ffiCall: #( void gst_init (int *argc, char **argv))
@@ -51,13 +59,13 @@ GStreamer class >> init [
 
 { #category : 'testing' }
 GStreamer class >> isAvailable [
-
-	[ (ExternalAddress 
-		loadSymbol: 'gst_init'
-		from: self ffiLibraryName) notNil ] 
-	on: Error
-	do: [ : ex | ^ false ].
-	^ true
+	^ 
+		[ 
+		(ExternalAddress 
+			loadSymbol: 'gst_init'
+			from: self findGStreamer) notNil 
+		] 
+		onErrorDo: [ false ]
 ]
 
 { #category : 'testing' }
