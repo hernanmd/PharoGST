@@ -1,1 +1,1 @@
-Package { #name : #BaselineOfGStreamer }
+Package { #name : 'BaselineOfGStreamer' }

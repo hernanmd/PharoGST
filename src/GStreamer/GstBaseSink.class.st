@@ -8,7 +8,8 @@ Class {
 
 { #category : 'converting' }
 GstBaseSink >> asGstVideoOverlay [
-	 ^ GstVideoOverlay fromHandle: self handle
+
+	^ GstVideoOverlay fromHandle: self getHandle
 ]
 
 { #category : 'API' }

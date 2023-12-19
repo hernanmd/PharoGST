@@ -8,12 +8,14 @@ Class {
 
 { #category : 'converting' }
 GstElement >> asGstBaseSink [
-	  ^ GstBaseSink fromHandle: self handle
+
+	^ GstBaseSink fromHandle: self getHandle
 ]
 
 { #category : 'converting' }
 GstElement >> asGstBin [
-	^ GstBin fromHandle: self handle
+
+	^ GstBin fromHandle: self getHandle
 ]
 
 { #category : 'API' }
